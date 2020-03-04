@@ -1,0 +1,1184 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Link",
+				"link"
+			],
+			[
+				"Li",
+				"LinksTableSeeder\t(LinksTableSeeder.php)"
+			],
+			[
+				"Arti",
+				"ArticleController\t(ArticleController.php)"
+			],
+			[
+				"sort",
+				"sortBy\t(Collection.php)"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"backgrou",
+				"backgroundColor"
+			],
+			[
+				"trans",
+				"transactions\t(TransactionReducer.js)"
+			],
+			[
+				"selec",
+				"selectedPayeeOption"
+			],
+			[
+				"sele",
+				"selectedPayeeOption"
+			],
+			[
+				"con",
+				"const"
+			],
+			[
+				"payees",
+				"payeesOptions"
+			],
+			[
+				"selectedCa",
+				"selectedCategories"
+			],
+			[
+				"consol",
+				"console.debug(\"filter\t(index.js)"
+			],
+			[
+				"in",
+				"individual"
+			],
+			[
+				"getpay",
+				"getPayees"
+			],
+			[
+				"Tran",
+				"TransactionReducer"
+			],
+			[
+				"pay",
+				"payee"
+			],
+			[
+				"getpayee",
+				"getPayeesOptions\t(index.js)"
+			],
+			[
+				"payee",
+				"payees"
+			],
+			[
+				"paye",
+				"payees"
+			],
+			[
+				"select",
+				"selectedCategories"
+			],
+			[
+				"selected",
+				"selectedCategories"
+			],
+			[
+				"categor",
+				"categories"
+			],
+			[
+				"cate",
+				"categoryOptions"
+			],
+			[
+				"cat",
+				"categoryOptions"
+			],
+			[
+				"tiem",
+				"timeframe"
+			],
+			[
+				"reportsfil",
+				"ReportsFilterReducer"
+			],
+			[
+				"new",
+				"newFilter"
+			],
+			[
+				"accoun",
+				"accounts.details"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"setb",
+				"setBankAccounts"
+			],
+			[
+				"ReportsFilter",
+				"ReportsFilterReducer"
+			],
+			[
+				"seled",
+				"selected"
+			],
+			[
+				"selecte",
+				"selectedAccounts"
+			],
+			[
+				"props",
+				"props.accounts"
+			],
+			[
+				"prop",
+				"props"
+			],
+			[
+				"acc",
+				"accounts"
+			],
+			[
+				"account",
+				"accounts"
+			],
+			[
+				"open",
+				"openDatabase"
+			],
+			[
+				"catego",
+				"categories\t(index.js)"
+			],
+			[
+				"cag",
+				"categories"
+			],
+			[
+				"Ca",
+				"CategoriesReducer"
+			],
+			[
+				"ca",
+				"categories\t(ReportsFilterReducer.js)"
+			],
+			[
+				"bord",
+				"borderColor\t(styles.js)"
+			],
+			[
+				"consoel",
+				"console.log(\"setActives"
+			],
+			[
+				"set",
+				"setState"
+			],
+			[
+				"onselec",
+				"onSelectPayees"
+			],
+			[
+				"activ",
+				"activeItems"
+			],
+			[
+				"all",
+				"allPayees"
+			],
+			[
+				"data",
+				"dataOptions"
+			],
+			[
+				"timefra",
+				"timeframeOptions"
+			],
+			[
+				"dat",
+				"date"
+			],
+			[
+				"timefr",
+				"timeframeOptions"
+			],
+			[
+				"setacti",
+				"setActives"
+			],
+			[
+				"render",
+				"renderItem"
+			],
+			[
+				"num",
+				"numberOfDataPerRow"
+			],
+			[
+				"Ti",
+				"Tilelist\t(index.js)"
+			],
+			[
+				"upda",
+				"updateFilters"
+			],
+			[
+				"update",
+				"updateFilters\t(index.js)"
+			],
+			[
+				"time",
+				"timeframe"
+			],
+			[
+				"ReportsF",
+				"ReportsFilterReducer"
+			],
+			[
+				"deful",
+				"defaultTimeframeOptionIndex"
+			],
+			[
+				"pad",
+				"paddingHorizontal\t(index.js)"
+			],
+			[
+				"cage",
+				"category"
+			],
+			[
+				"flex",
+				"flexGrow\tnumber"
+			],
+			[
+				"is",
+				"isSelected\t(index.js)"
+			],
+			[
+				"inde",
+				"index"
+			],
+			[
+				"borderbott",
+				"borderBottomColor\tcolor"
+			],
+			[
+				"borderright",
+				"borderRightWidth\tnumber"
+			],
+			[
+				"card",
+				"cardWidth"
+			],
+			[
+				"padding",
+				"padding\t(index.js)"
+			],
+			[
+				"button",
+				"Button"
+			],
+			[
+				"te",
+				"texts"
+			],
+			[
+				"date",
+				"date"
+			],
+			[
+				"getdate",
+				"getDateText"
+			],
+			[
+				"defau",
+				"defaultOptionIndex"
+			],
+			[
+				"defual",
+				"defaultDate"
+			],
+			[
+				"defaul",
+				"defaultDate"
+			],
+			[
+				"default",
+				"defaultIndex\t(index.js)"
+			],
+			[
+				"forma",
+				"formatDate"
+			],
+			[
+				"filter",
+				"filters"
+			],
+			[
+				"na",
+				"navigate\t(index.js)"
+			],
+			[
+				"border",
+				"borderBottomWidth\t(styles.js)"
+			],
+			[
+				"wh",
+				"white\t(styles.js)"
+			],
+			[
+				"dt",
+				"date"
+			],
+			[
+				"getMonth",
+				"getMonthRange"
+			],
+			[
+				"marginBottom",
+				"marginBottom\t(index.js)"
+			],
+			[
+				"margin",
+				"marginVertical\tnumber, string"
+			],
+			[
+				"item",
+				"itemIndex"
+			],
+			[
+				"borderTop",
+				"borderTopWidth\tnumber"
+			],
+			[
+				"table",
+				"tableData"
+			],
+			[
+				"isasc",
+				"isAscSort"
+			],
+			[
+				"tabl",
+				"tableData"
+			],
+			[
+				"tab",
+				"tableData"
+			],
+			[
+				"categ",
+				"category\t(index.js)"
+			],
+			[
+				"get",
+				"getTransactions\t(index.js)"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"execu",
+				"executeSql"
+			],
+			[
+				"categoriestable",
+				"categoriesTableName"
+			],
+			[
+				"transaction",
+				"transactionTableName"
+			],
+			[
+				"nav",
+				"navListener"
+			],
+			[
+				"add",
+				"addNavigatorListener\t(index.js)"
+			],
+			[
+				"Navigat",
+				"NavigatorService"
+			],
+			[
+				"re",
+				"render"
+			],
+			[
+				"to",
+				"toFixed\t(index.js)"
+			],
+			[
+				"custo",
+				"customDate"
+			],
+			[
+				"custom",
+				"customDate"
+			],
+			[
+				"background",
+				"backgroundColor"
+			],
+			[
+				"da",
+				"database"
+			],
+			[
+				"index",
+				"indexOf"
+			],
+			[
+				"tal",
+				"tableData"
+			],
+			[
+				"onpress",
+				"onPressTableItem"
+			],
+			[
+				"touch",
+				"TouchableOpacity"
+			],
+			[
+				"onpre",
+				"onPressTableItem\t(index.js)"
+			],
+			[
+				"pie",
+				"pieData"
+			],
+			[
+				"tot",
+				"total"
+			],
+			[
+				"ta",
+				"tableTitles"
+			],
+			[
+				"compo",
+				"componentWillReceiveProps\t(index.js)"
+			],
+			[
+				"conso",
+				"console.log\t(index.js)"
+			],
+			[
+				"total",
+				"totalSpending"
+			],
+			[
+				"Pro",
+				"PropTypes"
+			],
+			[
+				"sear",
+				"searchDatabase"
+			],
+			[
+				"search",
+				"searchKeys"
+			],
+			[
+				"t",
+				"this"
+			],
+			[
+				"searc",
+				"searchKeys"
+			],
+			[
+				"user",
+				"userSelectedCategories"
+			],
+			[
+				"sp",
+				"spending"
+			],
+			[
+				"self",
+				"alignSelf\tenum('auto', 'flex-start', 'flex-end', 'center', 'stretch', 'baseline')"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/SASS Build/SASS.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 170.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"incre",
+				"Increment Selection"
+			],
+			[
+				"phpfm",
+				"phpfmt: format now"
+			],
+			[
+				"remoe",
+				"Package Control: Remove Package"
+			],
+			[
+				"phpfmt",
+				"phpfmt: format now"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inc",
+				"Increment Selection"
+			],
+			[
+				"prett",
+				"JsPrettier: Format Code"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"xdebug",
+				"Xdebug: Stop Debugging (Close Windows)"
+			],
+			[
+				"xdebu",
+				"Xdebug: Restart Session"
+			],
+			[
+				"reinden",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"comma",
+				"JSONComma: Run"
+			],
+			[
+				"reindent",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"packageresou",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"packageresour",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"brack",
+				"BracketHighlighter: Wrap Selections with Brackets"
+			],
+			[
+				"ju",
+				"BracketHighlighter: Jump to Left Bracket"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"vue",
+				"VUEFormatter: Set Formatter Preferences"
+			],
+			[
+				"fold",
+				"BracketHighlighter: Fold Bracket Content"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"browe",
+				"Browse Mode: Left Sidebar"
+			],
+			[
+				"",
+				"JSONComma: Run"
+			],
+			[
+				"jso",
+				"JSON Reindent: reindent file or selection"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 324.0,
+		"history":
+		[
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(false)",
+			"sublime.log_commands(True)",
+			"command\": \"sublime.log_commands(True)",
+			"sublime.log_commands(True)",
+			"wrap_brackets",
+			"sublime.log_commands(True)",
+			"log_input(true)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"debugger",
+			"json"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/projects/web-form",
+		"/C/projects/web-form/src"
+	],
+	"file_history":
+	[
+		"/C/projects/laraval-delete-me/links/routes/graphql.php",
+		"/C/projects/laraval-delete-me/links/app/Http/Controllers/GraphQLController.php",
+		"/C/projects/laraval-delete-me/links/app/GraphQL/Schema.php",
+		"/C/projects/laraval-delete-me/links/app/GraphQL/Types/User.php",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/components/Route/index.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/components/Root/index.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/components/Invoice/index.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/components/commons/Base/style.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/models/user.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/models/item.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/models/colour.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/models/payment.js",
+		"/C/projects/AppProcrush/models/condition.js",
+		"/C/projects/AppProcrush/models/base.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/components/Invoice/Edit/items.js",
+		"/C/projects/AppDoop/navigation/index.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/components/commons/AutoSizeInput/index.js",
+		"/C/projects/fitting room/fittingroom/resources/assets/js/index.js",
+		"/C/projects/web payment UI/payment/src/index.js",
+		"/C/projects/fitting room/fittingroom/package.json",
+		"/C/projects/web payment UI/payment/src/style/colors.js",
+		"/C/projects/web payment UI/payment/src/style/index.js",
+		"/C/projects/web payment UI/payment/src/screens/Form.js",
+		"/C/projects/web payment UI/payment/src/components/Base/index.js",
+		"/C/projects/web payment UI/payment/package.json",
+		"/C/projects/AppDoop/.gitignore",
+		"/C/projects/web payment UI/payment/src/App.js",
+		"/C/projects/laraval-delete-me/links/app/GraphQL/Types/UsersType.php",
+		"/C/projects/laraval-delete-me/links/app/GraphQL/Quires/UsersQuery.php",
+		"/C/PHP/7.2.22/php.ini",
+		"/C/projects/laraval-delete-me/links/phpunit.xml",
+		"/C/projects/laraval-delete-me/apidemo/resources/views/welcome.blade.php",
+		"/C/projects/laraval-delete-me/apidemo/app/Student.php",
+		"/C/projects/laraval-delete-me/apidemo/resources/views/create.blade.php",
+		"/C/projects/laraval-delete-me/links/database/migrations/2020_02_17_070605_create_links_table.php",
+		"/C/projects/laraval-delete-me/links/.env",
+		"/C/projects/laraval-delete-me/apidemo/database/migrations/2020_02_17_061743_students.php",
+		"/C/projects/laraval-delete-me/apidemo/app/Http/Controllers/StudentController.php",
+		"/C/projects/laraval-delete-me/links/database/factories/LinkFactory.php",
+		"/C/projects/laraval-delete-me/links/database/seeds/DatabaseSeeder.php",
+		"/C/projects/laraval-delete-me/links/database/seeds/LinksTableSeeder.php",
+		"/C/projects/laraval-delete-me/apidemo/routes/web.php",
+		"/C/projects/laraval-delete-me/links/.gitignore",
+		"/C/projects/procrush_web/app/Http/Controllers/WorkOrderController.php",
+		"/C/projects/procrush_web/app/Http/Controllers/SupportController.php",
+		"/C/projects/procrush_web/app/Http/Controllers/IndexController.php",
+		"/C/projects/procrush_web/app/Http/Controllers/GraphQLController.php",
+		"/C/projects/procrush_web/app/Http/Controllers/Controller.php",
+		"/C/projects/procrush_web/app/Http/Controllers/AssetController.php",
+		"/C/projects/laraval-delete-me/apidemo/resources/views/index.blade.php",
+		"/C/projects/laraval-delete-me/apidemo/database/migrations/2019_01_23_043319_create_articles_table.php",
+		"/C/projects/laraval-delete-me/apidemo/resources/views/common/message.blade.php",
+		"/C/projects/laraval-delete-me/apidemo/resources/views/common/layout.blade.php",
+		"/C/projects/laraval-delete-me/apidemo/public/favicon.ico",
+		"/C/projects/fitting room/fittingroom/routes/web.php",
+		"/C/projects/laraval-delete-me/apidemo/app/Http/Controllers/ArticleController.php",
+		"/C/projects/laraval-delete-me/apidemo/app/Http/Controllers/testController.php",
+		"/C/projects/laraval-delete-me/apidemo/.gitignore",
+		"/C/projects/fitting room/fittingroom/start.bat",
+		"/C/Users/HyphenDev/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/C/Users/HyphenDev/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/projects/laraval-delete-me/apidemo/xdebug-api.sublime-project",
+		"/C/projects/AppTrulyCrueltyFreeAPI/.env",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/ProductController.php",
+		"/C/Users/HyphenDev/Desktop/tcf.sql",
+		"/C/Users/HyphenDev/Desktop/tcf-live.sql",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/CompanyController.php",
+		"/C/projects/fittingroom/package.json",
+		"/C/projects/laraval-delete-me/apidemo/.env",
+		"/C/projects/laraval-delete-me/apidemo/app/Article.php",
+		"/C/projects/laraval-delete-me/apidemo/database/seeds/ArticlesTableSeeder.php",
+		"/C/projects/laraval-delete-me/apidemo/app/Http/Controllers/Auth/RegisterController.php",
+		"/C/projects/laraval-delete-me/apidemo/storage/logs/laravel.log",
+		"/C/projects/laraval-delete-me/apidemo/config/app.php",
+		"/C/projects/laraval-delete-me/apidemo/config/debugbar.php",
+		"/C/projects/laraval-delete-me/apidemo/database/seeds/UsersTableSeeder.php",
+		"/C/projects/laraval-delete-me/apidemo/database/seeds/DatabaseSeeder.php",
+		"/C/projects/laraval-delete-me/apidemo/routes/api.php",
+		"/C/Users/HyphenDev/Desktop/thermal/.env",
+		"/C/Users/HyphenDev/Desktop/thermal/vendor/mike42/escpos-php/src/Mike42/Escpos/PrintConnectors/WindowsPrintConnector.php",
+		"/C/projects/laraval-delete-me/apidemo/vendor/laravel/framework/src/Illuminate/Auth/Events/Registered.php",
+		"/C/projects/laraval-delete-me/apidemo/app/User.php",
+		"/C/projects/laraval-delete-me/apidemo/database/migrations/2019_01_24_013404_adds_api_token_to_users_table.php",
+		"/C/projects/fittingroom/public/web.config",
+		"/C/projects/fittingroom/.env",
+		"/C/projects/fittingroom/composer.json",
+		"/C/Users/HyphenDev/Desktop/difference.txt",
+		"/C/projects/AppKind+/package.json",
+		"/C/projects/AppSevconn/package.json",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_06_01_061141_create_products_table.php",
+		"/C/projects/fittingroom/tatus",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/factories/ProductFactory.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_07_23_015325_create_sheet1_table.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/config/app.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/composer.lock",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_07_23_052315_add_deleted_at_to_all_tables.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/Filters/Barcode.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/Filters/Name.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/Filters/Filter.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/Filters/Categories.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/Filters/Order.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/Filters/Brands.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/factories/CategoriesFactory.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/seeds/CategoriesSeeder​.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/seeds/ProductsSeeder​.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_07_16_034411_create_categories_table.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_06_01_061146_create_reviews_table.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_06_01_061143_create_tags_table.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_06_01_061142_create_colours_table.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_06_01_061140_create_companies_table.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Categories.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_07_16_033357_create_brands_table.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/factories/BrandsFactory.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/seeds/DatabaseSeeder.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/Filters/Description.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/.git/config",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/BrandsController.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Http/Controllers/CategoriesController.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Product.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/app/Brands.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/vendor/laravel/framework/src/Illuminate/Support/Collection.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/routes/api.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/migrations/2018_06_01_070216_create_product_tag_table.php",
+		"/C/projects/AppTrulyCrueltyFreeAPI/storage/logs/laravel.log",
+		"/C/projects/AppTrulyCrueltyFreeAPI/database/seeds/BrandsSeeder​.php"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 122.0,
+		"where_history":
+		[
+			"C:\\projects\\web payment UI\\payment\\src",
+			"C:\\projects\\laraval-delete-me\\links\\vendor,composer.json",
+			"C:\\projects\\laraval-delete-me\\links",
+			"C:\\projects\\laraval-delete-me",
+			"C:\\projects\\AppTrulyCrueltyFreeAPI\\app\\Http",
+			"C:\\projects\\AppTrulyCrueltyFreeAPI\\",
+			"C:\\projects\\AppTrulyCrueltyFreeAPI\\app",
+			"C:\\projects\\AppTrulyCrueltyFreeAPI\\app\\Http",
+			"C:\\projects\\AppTrulyCrueltyFreeAPI\\app",
+			"C:\\projects\\AppTrulyCrueltyFreeAPI"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Type::string()",
+			"App\\GraphQL",
+			"nonNull",
+			"cursor",
+			"cursor: pointer;",
+			"change",
+			"designHeight",
+			"bgWhite",
+			"Styles",
+			"styles",
+			"./src/index.css",
+			"/src/index.css",
+			"Constants",
+			"constants",
+			"Constants",
+			"Rebing",
+			"mapWebRoutes",
+			"withoutExceptionHandle",
+			"The given data was invalid",
+			" he given data was invalid",
+			" The given data was invalid",
+			"table",
+			"increments",
+			"view",
+			"\\",
+			"ArticleController",
+			"\\",
+			"validator",
+			"password_confirmation",
+			"Article",
+			"article",
+			"request",
+			"Request",
+			"request",
+			"Request",
+			"debug",
+			"aliases",
+			"function",
+			"extends Model",
+			"DEFAULT",
+			"NULL",
+			"is added",
+			"deleted_at",
+			"delete_at",
+			"upstream",
+			"updated_at",
+			"sheet1",
+			"CreateSheet1Table",
+			"product_url",
+			"$description",
+			"names",
+			" ",
+			"book",
+			"categories",
+			";\n",
+			"Builder",
+			"model",
+			"Model",
+			"model",
+			"Model",
+			"this->",
+			"decorator",
+			"App\\Brands",
+			"App\\Products",
+			"default",
+			" ",
+			"=>",
+			"$table->",
+			"Brand",
+			"defaullt",
+			"default",
+			"::find",
+			"color",
+			"productController",
+			"paginate",
+			"toArray",
+			"ProductController",
+			"('",
+			"(",
+			",",
+			"->",
+			"table",
+			"extends Model",
+			"require_once",
+			"require",
+			"27",
+			"console.log",
+			"CollapseView",
+			"collapse",
+			"headerView",
+			"CollapseView"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 126.0
+	},
+	"output.exec":
+	{
+		"height": 195.0
+	},
+	"output.find_results":
+	{
+		"height": 102.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "form.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"phpunit",
+				"links\\phpunit.xml"
+			],
+			[
+				"welcome",
+				"apidemo\\resources\\views\\welcome.blade.php"
+			],
+			[
+				"database/seeds/LinksTableSeeder.php",
+				"links\\database\\seeds\\LinksTableSeeder.php"
+			],
+			[
+				"config\\debugbar.php",
+				"laraval-delete-me\\apidemo\\config\\debugbar.php"
+			],
+			[
+				"config\\app.php",
+				"laraval-delete-me\\apidemo\\config\\app.php"
+			],
+			[
+				"ProductController.php",
+				"app\\Http\\Controllers\\ProductController.php"
+			],
+			[
+				"template",
+				"bhp-digital-design-system\\src\\.cache\\template.js"
+			],
+			[
+				"gatsby-",
+				"bhp-digital-design-system\\gatsby-on-create-node.js"
+			],
+			[
+				"buttons.css",
+				"bhp-digital-design-system\\node_modules\\bootstrap\\scss\\_buttons.scss"
+			],
+			[
+				"venu",
+				"resources\\views\\admin\\venues.blade.php"
+			],
+			[
+				"leader",
+				"resources\\views\\admin\\leaders.blade.php"
+			],
+			[
+				"login",
+				"resources\\views\\layouts\\login.blade.php"
+			],
+			[
+				"inde",
+				"public\\index.php"
+			],
+			[
+				"help",
+				"app\\Helpers\\Helper.php"
+			],
+			[
+				"login.",
+				"resources\\views\\layouts\\login.blade.php"
+			],
+			[
+				"normal",
+				"resources\\assets\\less\\normalize.less"
+			],
+			[
+				"app.scss",
+				"resources\\assets\\sass\\app.scss"
+			],
+			[
+				"auto",
+				"vendor\\autoload.php"
+			],
+			[
+				"autoload.php",
+				"vendor\\autoload.php"
+			],
+			[
+				"index.php",
+				"public\\index.php"
+			],
+			[
+				"venues",
+				"babiesbooking\\resources\\views\\admin\\venues.blade.php"
+			],
+			[
+				"vue",
+				"src\\css\\vuelidate.css"
+			],
+			[
+				"router",
+				"app\\routes\\contactsRoute.js"
+			],
+			[
+				"contacts",
+				"app\\controllers\\contactsIndexController.js"
+			],
+			[
+				"json",
+				"lib\\snap\\component.json"
+			],
+			[
+				"activities",
+				"app\\templates\\activities.hbs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 436.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
