@@ -17,7 +17,7 @@ export default class Legal extends Base {
     year: "",
     studentId: "",
     idError: false,
-    DOBError: false
+    confirmError: false
   };
   renderHeader() {
     return (
@@ -25,7 +25,6 @@ export default class Legal extends Base {
         style={styles()
           .bg(colors.bgBlue)
           .h(150)
-          .fullWidth()
           .row()
           .centerall()}
       >
@@ -40,7 +39,7 @@ export default class Legal extends Base {
     );
   }
   renderInputs() {
-    const { idError, DOBError } = this.state;
+    const { idError, confirmError } = this.state;
     return (
       <div
         style={styles()
@@ -53,7 +52,7 @@ export default class Legal extends Base {
           style={styles()
             .column()
             .fullWidth()
-            .marginb(40)}
+            .marginb(20)}
         >
           <Input
             style={styles()
@@ -79,7 +78,7 @@ export default class Legal extends Base {
                 .ftSize(20)
                 .ftColor(colors.ftRed)}
             >
-              Please input your student ID.{" "}
+              Please input your phone number.
             </div>
           )}
         </div>
@@ -108,13 +107,13 @@ export default class Legal extends Base {
             }
             onChange={this.onIDChange}
           />
-          {idError && (
+          {confirmError && (
             <div
               style={styles()
                 .ftSize(20)
                 .ftColor(colors.ftRed)}
             >
-              Please input your student ID.
+              Please confirm your phone number.
             </div>
           )}
         </div>
@@ -123,7 +122,7 @@ export default class Legal extends Base {
           style={styles()
             .fullWidth()
             .bg(colors.ftBlue)}
-          onClick={this.onNext}
+          onClick={this.onContinue}
         >
           <div
             style={styles()
@@ -131,13 +130,33 @@ export default class Legal extends Base {
               .ftSize(40)
               .paddingv(10)}
           >
-            Next
+            Continue
           </div>
         </Button>
       </div>
     );
   }
 
+  renderHelp() {
+    return (
+      <div
+        style={styles()
+          .row()
+          .paddingh(80)
+          .fullWidth(0)}
+      >
+        <Button style={styles().pullRight()}>
+          <div
+            style={styles()
+              .ftSize(20)
+              .ftColor(colors.ftBlue)}
+          >
+            Help, I do not have a mobile phone
+          </div>
+        </Button>
+      </div>
+    );
+  }
   onIDChange(event) {
     this.setState({ studentId: event.target.value });
   }
@@ -171,9 +190,9 @@ export default class Legal extends Base {
     let date = `${year}-${month}-${day}`;
     return new Date(date).getDate() == day.toString();
   }
-  onNext() {
+  onContinue() {
     const { day, month, year, studentId } = this.state;
-    this.setState({ idError: false, DOBError: false });
+    this.setState({ idError: false, confirmError: false });
 
     if (!studentId || studentId.length <= 0) {
       this.setState({ idError: true });
@@ -184,7 +203,7 @@ export default class Legal extends Base {
     if (valid) {
       this.navigate();
     } else {
-      this.setState({ DOBError: true });
+      this.setState({ confirmError: true });
     }
   }
 
@@ -214,7 +233,7 @@ export default class Legal extends Base {
               .column()
               .center()
               .paddingh(10)
-              .paddingv(40)}
+              .paddingv(30)}
           >
             <div
               style={styles()
@@ -228,13 +247,14 @@ export default class Legal extends Base {
               style={styles()
                 .ftSize(20)
                 .w(700)
-                .marginb(50)}
+                .marginb(30)}
             >
               NOTE - You must have access to this device so you can retrieve your event
               ticket and receive other information about todays event.﻿
             </div>
 
             {this.renderInputs()}
+            {this.renderHelp()}
           </div>
         </div>
       </div>
