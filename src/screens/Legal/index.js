@@ -36,6 +36,7 @@ const HelpButton = () => {
         toggle={toggle}
         style={styles()
           .fullHeight()
+          .marginv(0)
           .column()
           .centerall()}
       >
