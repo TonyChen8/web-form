@@ -1,32 +1,103 @@
 /*global styles, colors*/
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { FaMobileAlt } from "react-icons/fa";
-import { MediaQuery, Desktop, Tablet, Mobile, Default } from "../../style/mediaquery";
+
+import { Modal } from "reactstrap";
 
 import Base from "../../components/Base";
-import Input from "../../components/Input";
 import Button from "../../components/Button";
-import DatePicker from "../../components/DatePicker";
+import PhoneNumber from "../../components/PhoneNumber";
+import Separator from "../../components/Separator";
+
+import Checkout from "../Checkout";
+
+const HelpButton = () => {
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
+
+  return (
+    <div
+      style={styles()
+        .row()
+        .w(600)}
+    >
+      <Button style={styles().pullRight()} onClick={toggle}>
+        <div
+          style={styles()
+            .ftSize(20)
+            .ftColor(colors.ftBlue)}
+        >
+          Help, I do not have a mobile phone
+        </div>
+      </Button>
+      <Modal
+        isOpen={modal}
+        toggle={toggle}
+        style={styles()
+          .fullHeight()
+          .column()
+          .centerall()}
+      >
+        <div
+          style={styles()
+            .bg(colors.bgBlue)
+            .row()
+            .fullWidth()
+            .center()
+            .paddingh(20)}
+        >
+          <Button
+            style={styles()
+              .ftSize(30)
+              .pullRight()}
+            onClick={toggle}
+          >
+            <div
+              style={styles()
+                .ftSize(30)
+                .ftColor(colors.ftWhite)}
+            >
+              X
+            </div>
+          </Button>
+        </div>
+        <Separator></Separator>
+        <div
+          style={styles()
+            .paddingh(30)
+            .paddingv(30)}
+        >
+          <div style={styles().ftSize(24)}>
+            Please visit one of our staff members at the registration desk.
+          </div>
+        </div>
+      </Modal>
+    </div>
+  );
+};
 
 export default class Legal extends Base {
   static Route = "legal";
 
   state = {
-    day: "",
-    month: "",
-    year: "",
-    studentId: "",
-    idError: false,
+    phoneNumber: "",
+    confirmedNumber: "",
+    country: "+61",
+    confirmedCountry: "+61",
+    phoneError: false,
     confirmError: false
   };
+
   renderHeader() {
     return (
       <div
         style={styles()
           .bg(colors.bgBlue)
-          .h(150)
-          .row()
-          .centerall()}
+          .column()
+          .centerall()
+          .h(100)
+          .marginb(30)}
       >
         <div
           style={styles()
@@ -38,97 +109,152 @@ export default class Legal extends Base {
       </div>
     );
   }
+
+  renderMessage() {
+    return (
+      <div
+        style={styles()
+          .column()
+          .center()
+          .marginb(10)}
+      >
+        <div
+          style={styles()
+            .ftSize(36)
+            .marginb(20)}
+        >
+          Please enter your mobile phone number
+        </div>
+        <div
+          className="alert alert-warning"
+          style={styles()
+            .ftSize(20)
+            .w(600)}
+        >
+          NOTE - You must have access to this device so you can retrieve your event ticket
+          and receive other information about todays event.﻿
+        </div>
+      </div>
+    );
+  }
   renderInputs() {
-    const { idError, confirmError } = this.state;
+    const {
+      phoneError,
+      confirmError,
+      confirmedCountry,
+      confirmedNumber,
+      country,
+      phoneNumber
+    } = this.state;
     return (
       <div
         style={styles()
           .w(600)
-          .column()
-          .container()
-          .center()}
+          .marginb(20)}
       >
-        <div
-          style={styles()
-            .column()
-            .fullWidth()
-            .marginb(20)}
-        >
-          <Input
+        {phoneError && (
+          <div
             style={styles()
               .ftSize(20)
-              .lineH(2)
-              .marginv(10)}
-            placeholder={"Mobile Phone"}
-            containerStyle={styles()
-              .bg(colors.bgGray)
-              .w(600)}
-            icon={
-              <FaMobileAlt
-                style={styles()
-                  .size(40)
-                  .marginr(15)}
-              />
-            }
-            onChange={this.onIDChange}
-          />
-          {idError && (
-            <div
-              style={styles()
-                .ftSize(20)
-                .ftColor(colors.ftRed)}
-            >
-              Please input your phone number.
-            </div>
-          )}
-        </div>
+              .ftColor(colors.ftRed)}
+          >
+            Please input your phone number.
+          </div>
+        )}
 
-        <div
+        <PhoneNumber
           style={styles()
-            .column()
-            .fullWidth()
+            .ftSize(20)
+            .paddingv(5)
+            .marginv(10)}
+          placeholder={"Mobile Phone"}
+          containerStyle={styles()
+            .bg(colors.bgGray)
             .marginb(40)}
-        >
-          <Input
+          icon={
+            <FaMobileAlt
+              style={styles()
+                .size(40)
+                .marginr(15)}
+            />
+          }
+          country={country}
+          phoneNumber={phoneNumber}
+          onCountryCodeChange={this.onCountryCodeChange}
+          onPhoneChange={this.onPhoneChange}
+        />
+
+        {confirmError && (
+          <div
             style={styles()
               .ftSize(20)
-              .lineH(2)
-              .marginv(10)}
-            placeholder={"Confirm Mobile Phone"}
-            containerStyle={styles()
-              .bg(colors.bgGray)
-              .w(600)}
-            icon={
-              <FaMobileAlt
-                style={styles()
-                  .size(40)
-                  .marginr(15)}
-              />
-            }
-            onChange={this.onIDChange}
-          />
-          {confirmError && (
-            <div
-              style={styles()
-                .ftSize(20)
-                .ftColor(colors.ftRed)}
-            >
-              Please confirm your phone number.
-            </div>
-          )}
-        </div>
+              .ftColor(colors.ftRed)}
+          >
+            Please confirm your phone number.
+          </div>
+        )}
 
+        <PhoneNumber
+          style={styles()
+            .ftSize(20)
+            .paddingv(5)
+            .marginv(10)}
+          placeholder={"Confirm Mobile Phone"}
+          containerStyle={styles()
+            .bg(colors.bgGray)
+            .marginb(20)}
+          icon={
+            <FaMobileAlt
+              style={styles()
+                .size(40)
+                .marginr(15)}
+            />
+          }
+          country={confirmedCountry}
+          phoneNumber={confirmedNumber}
+          onCountryCodeChange={this.onConfirmCountryChange}
+          onPhoneChange={this.onConfirmNumberChange}
+        />
+      </div>
+    );
+  }
+
+  renderNextButton() {
+    return (
+      <div
+        style={styles()
+          .row()
+          .w(600)
+          .marginb(30)}
+      >
         <Button
           style={styles()
-            .fullWidth()
+            .w(200)
+            .marginr(80)
+            .bg(colors.ftBlue)}
+          onClick={() => this.navigateBack()}
+        >
+          <div
+            style={styles()
+              .ftColor(colors.ftWhite)
+              .ftSize(30)
+              .paddingv(15)}
+          >
+            Back
+          </div>
+        </Button>
+        <Button
+          style={styles()
+            .pullRight()
+            .w(200)
             .bg(colors.ftBlue)}
           onClick={this.onContinue}
         >
           <div
             style={styles()
               .ftColor(colors.ftWhite)
-              .ftSize(40)
-              .paddingv(10)}
+              .ftSize(30)
+              .paddingv(15)}
           >
             Continue
           </div>
@@ -137,125 +263,64 @@ export default class Legal extends Base {
     );
   }
 
-  renderHelp() {
-    return (
-      <div
-        style={styles()
-          .row()
-          .paddingh(80)
-          .fullWidth(0)}
-      >
-        <Button style={styles().pullRight()}>
-          <div
-            style={styles()
-              .ftSize(20)
-              .ftColor(colors.ftBlue)}
-          >
-            Help, I do not have a mobile phone
-          </div>
-        </Button>
-      </div>
-    );
+  onCountryCodeChange(event) {
+    this.setState({ country: event.target.value });
   }
-  onIDChange(event) {
-    this.setState({ studentId: event.target.value });
+  onConfirmCountryChange(event) {
+    this.setState({ confirmedCountry: event.target.value });
   }
-  onDayChange(event) {
-    this.setState({ day: event.target.value });
+  onPhoneChange(event) {
+    this.setState({ phoneNumber: event.target.value });
   }
-  onMonthChange(event) {
-    this.setState({ month: event.target.value });
-  }
-  onYearChange(event) {
-    this.setState({ year: event.target.value });
+  onConfirmNumberChange(event) {
+    this.setState({ confirmedNumber: event.target.value });
   }
 
-  checkNumber(value) {
-    if (!value || value.length <= 0) return false;
-    var numbers = /^[0-9]+$/;
-    return value.match(numbers);
-  }
-
-  check(year, month, day) {
-    if (!this.checkNumber(year)) {
-      return false;
-    }
-    if (!this.checkNumber(month)) {
-      return false;
-    }
-    if (!this.checkNumber(day)) {
-      return false;
-    }
-
-    let date = `${year}-${month}-${day}`;
-    return new Date(date).getDate() == day.toString();
-  }
   onContinue() {
-    const { day, month, year, studentId } = this.state;
-    this.setState({ idError: false, confirmError: false });
+    const { country, phoneNumber, confirmedCountry, confirmedNumber } = this.state;
+    this.setState({ phoneError: false, confirmError: false });
 
-    if (!studentId || studentId.length <= 0) {
-      this.setState({ idError: true });
+    if (!phoneNumber || phoneNumber.length <= 0) {
+      this.setState({ phoneError: true });
+      return;
     }
-
-    let valid = this.check(year, month, day);
-    console.log("-form/src/screens/Login/index.js:159", valid);
-    if (valid) {
-      this.navigate();
-    } else {
+    if (
+      !confirmedNumber ||
+      confirmedNumber.length <= 0 ||
+      phoneNumber !== confirmedNumber
+    ) {
       this.setState({ confirmError: true });
+      return;
     }
+
+    this.navigate(Checkout.Route);
   }
 
   render() {
     return (
       <div
         style={styles()
-          .container()
-          .column()
           .fullHeight()
-          .bg(colors.bgGray)
-          .centerall()}
+          .column()}
       >
+        {this.renderHeader()}
+        {this.renderMessage()}
         <div
           style={styles()
-            .h(768)
-            .w(1024)
-            .column()
             .container()
-            .bg(colors.bgWhite)}
+            .column()
+            .center()}
         >
-          {this.renderHeader()}
-
-          <div
-            style={styles()
-              .container()
-              .column()
-              .center()
-              .paddingh(10)
-              .paddingv(30)}
-          >
-            <div
-              style={styles()
-                .ftSize(36)
-                .marginb(20)}
-            >
-              Please enter your mobile phone number
-            </div>
-            <div
-              className="alert alert-warning"
-              style={styles()
-                .ftSize(20)
-                .w(700)
-                .marginb(30)}
-            >
-              NOTE - You must have access to this device so you can retrieve your event
-              ticket and receive other information about todays event.﻿
-            </div>
-
-            {this.renderInputs()}
-            {this.renderHelp()}
-          </div>
+          {this.renderInputs()}
+          <HelpButton />
+        </div>
+        <div
+          style={styles()
+            .column()
+            .center()
+            .marginb(30)}
+        >
+          {this.renderNextButton()}
         </div>
       </div>
     );

@@ -4,8 +4,8 @@ import { Route } from "react-router-dom";
 
 import Login from "../screens/Login";
 import Legal from "../screens/Legal";
-// import CreditCard from "../screens/CreditCard";
-// import Finish from "../screens/Finish";
+import Checkout from "../screens/Checkout";
+import Confirm from "../screens/Confirm";
 
 export default class Routes extends Component {
   constructor(props) {
@@ -17,20 +17,20 @@ export default class Routes extends Component {
         exact: true
       },
       {
-        path: "/legal",
+        path: "/" + Legal.Route,
         component: Legal,
         exact: true
+      },
+      {
+        path: "/" + Checkout.Route,
+        component: Checkout,
+        exact: true
+      },
+      {
+        path: "/" + Confirm.Route,
+        component: Confirm,
+        exact: true
       }
-      // {
-      //   path: "/creditcard",
-      //   component: CreditCard,
-      //   exact: true
-      // },
-      // {
-      //   path: "/finish",
-      //   component: Finish,
-      //   exact: true
-      // }
     ];
   }
 

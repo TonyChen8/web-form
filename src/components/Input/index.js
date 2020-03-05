@@ -10,10 +10,10 @@ export default class InputBox extends Component {
         style={{
           ...styles()
             .row()
+            .container()
             .fullWidth()
             .paddingh(25)
             .h(55)
-            .w("50%")
             .center(),
           ...containerStyle
         }}
@@ -23,11 +23,11 @@ export default class InputBox extends Component {
           type="text"
           style={{
             ...styles()
+              .span(1)
               .bg("transparent")
               .border(0)
               .paddingh(10)
               .h(20)
-              .fullWidth()
               .ftSize(12),
             ...style
           }}

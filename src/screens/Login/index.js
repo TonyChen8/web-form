@@ -1,8 +1,6 @@
 /*global styles, colors*/
-import React, { Component } from "react";
+import React from "react";
 import { FaRegIdCard, FaRegCalendarAlt } from "react-icons/fa";
-import moment from "moment";
-import { MediaQuery, Desktop, Tablet, Mobile, Default } from "../../style/mediaquery";
 
 import Base from "../../components/Base";
 import Input from "../../components/Input";
@@ -12,7 +10,7 @@ import DatePicker from "../../components/DatePicker";
 import Legal from "../Legal";
 
 export default class Login extends Base {
-  static Route = "";
+  static Route = "/";
 
   state = {
     day: "",
@@ -27,10 +25,10 @@ export default class Login extends Base {
       <div
         style={styles()
           .bg(colors.bgBlue)
-          .h(150)
-          .fullWidth()
-          .row()
-          .centerall()}
+          .column()
+          .centerall()
+          .h(100)
+          .marginb(30)}
       >
         <div
           style={styles()
@@ -42,96 +40,104 @@ export default class Login extends Base {
       </div>
     );
   }
-  renderInputs() {
-    const { idError, DOBError } = this.state;
+
+  renderMessage() {
     return (
       <div
         style={styles()
           .column()
-          .container()
-          .center()}
+          .center()
+          .ftSize(36)
+          .marginb(50)}
       >
-        <div
-          style={styles()
-            .column()
-            .fullWidth()
-            .marginb(40)}
-        >
-          <Input
-            style={styles()
-              .ftSize(20)
-              .lineH(2)
-              .marginv(10)}
-            placeholder={"Student ID"}
-            containerStyle={styles()
-              .bg(colors.bgGray)
-              .w(600)}
-            icon={
-              <FaRegIdCard
-                style={styles()
-                  .size(30)
-                  .marginr(15)}
-              />
-            }
-            onChange={this.onIDChange}
-          />
-          {idError && (
-            <div
-              style={styles()
-                .ftSize(20)
-                .ftColor(colors.ftRed)}
-            >
-              Please input your student ID.{" "}
-            </div>
-          )}
-        </div>
+        Please enter you student ID and date of birth
+      </div>
+    );
+  }
 
-        <div
-          style={styles()
-            .column()
-            .fullWidth()}
-        >
-          <DatePicker
+  renderInputs() {
+    const { idError, DOBError } = this.state;
+
+    return (
+      <div style={styles().w(600)}>
+        {idError && (
+          <div
             style={styles()
               .ftSize(20)
-              .lineH(2)
-              .marginv(10)}
-            containerStyle={styles()
-              .w(600)
-              .bg(colors.bgGray)}
-            icon={
-              <FaRegCalendarAlt
-                style={styles()
-                  .size(30)
-                  .marginr(15)}
-              />
-            }
-            onDayChange={this.onDayChange}
-            onMonthChange={this.onMonthChange}
-            onYearChange={this.onYearChange}
-          />
-          {DOBError && (
-            <div
+              .marginb(10)
+              .ftColor(colors.ftRed)}
+          >
+            Please input your student ID.
+          </div>
+        )}
+        <Input
+          style={styles()
+            .ftSize(20)
+            .paddingv(5)
+            .marginv(10)}
+          placeholder={"Student ID"}
+          containerStyle={styles()
+            .bg(colors.bgGray)
+            .marginb(40)}
+          icon={
+            <FaRegIdCard
               style={styles()
-                .ftSize(20)
-                .ftColor(colors.ftRed)}
-            >
-              Please input a valid date.
-            </div>
-          )}
-        </div>
+                .size(30)
+                .marginr(15)}
+            />
+          }
+          onChange={this.onIDChange}
+        />
+
+        {DOBError && (
+          <div
+            style={styles()
+              .ftSize(20)
+              .ftColor(colors.ftRed)}
+          >
+            Please input a valid date.(e.g. 31/01/2020)
+          </div>
+        )}
+        <DatePicker
+          style={styles()
+            .ftSize(20)
+            .lineH(2)}
+          containerStyle={styles()
+            .bg(colors.bgGray)
+            .marginb(100)}
+          icon={
+            <FaRegCalendarAlt
+              style={styles()
+                .size(30)
+                .marginr(15)}
+            />
+          }
+          onDayChange={this.onDayChange}
+          onMonthChange={this.onMonthChange}
+          onYearChange={this.onYearChange}
+        />
+      </div>
+    );
+  }
+
+  renderNextButton() {
+    return (
+      <div
+        style={styles()
+          .w(600)
+          .marginb(30)}
+      >
         <Button
           style={styles()
             .fullWidth()
-            .pullDown()
             .bg(colors.ftBlue)}
           onClick={this.onNext}
         >
           <div
             style={styles()
               .ftColor(colors.ftWhite)
-              .ftSize(40)
-              .paddingv(20)}
+              .ftSize(30)
+              .paddingv(15)}
           >
             Next
           </div>
@@ -139,7 +145,6 @@ export default class Login extends Base {
       </div>
     );
   }
-
   onIDChange(event) {
     this.setState({ studentId: event.target.value });
   }
@@ -160,7 +165,7 @@ export default class Login extends Base {
   }
 
   check(year, month, day) {
-    if (!this.checkNumber(year)) {
+    if (!this.checkNumber(year) || year.length !== 4) {
       return false;
     }
     if (!this.checkNumber(month)) {
@@ -171,7 +176,7 @@ export default class Login extends Base {
     }
 
     let date = `${year}-${month}-${day}`;
-    return new Date(date).getDate() == day.toString();
+    return new Date(date).getDate().toString() === day.toString();
   }
   onNext() {
     const { day, month, year, studentId } = this.state;
@@ -194,39 +199,26 @@ export default class Login extends Base {
     return (
       <div
         style={styles()
-          .container()
           .column()
-          .fullHeight()
-          .bg(colors.bgGray)
-          .centerall()}
+          .fullHeight()}
       >
+        {this.renderHeader()}
+        {this.renderMessage()}
         <div
           style={styles()
-            .h(768)
-            .w(1024)
-            .column()
             .container()
-            .bg(colors.bgWhite)}
+            .column()
+            .center()}
         >
-          {this.renderHeader()}
-
-          <div
-            style={styles()
-              .container()
-              .column()
-              .center()
-              .paddingh(10)
-              .paddingv(80)}
-          >
-            <div
-              style={styles()
-                .ftSize(36)
-                .marginb(50)}
-            >
-              Please enter you student ID and date of birth
-            </div>
-            {this.renderInputs()}
-          </div>
+          {this.renderInputs()}
+        </div>
+        <div
+          style={styles()
+            .row()
+            .centerall()
+            .marginb(30)}
+        >
+          {this.renderNextButton()}
         </div>
       </div>
     );

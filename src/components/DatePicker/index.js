@@ -17,9 +17,9 @@ export default class DatePicker extends Component {
       ...styles({ textAlign: "center" })
         .bg("transparent")
         .border(0)
+        .w("30%")
         .paddingh(10)
         .h(20)
-        .w("20%")
         .ftSize(20),
       ...style
     };
@@ -29,6 +29,7 @@ export default class DatePicker extends Component {
         style={{
           ...styles()
             .row()
+            .container()
             .fullWidth()
             .center()
             .h(55)

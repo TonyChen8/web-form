@@ -14,17 +14,14 @@ let timer = null;
 
 export const reStyle = () => {
   const width = Math.round(
-    Dimensions
-      ? Dimensions.get("window").width
-      : Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+    Dimensions ? Dimensions.get("window").width : Math.max(window.innerWidth || 100)
   );
   const height = Math.round(
-    Dimensions
-      ? Dimensions.get("window").height
-      : Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    Dimensions ? Dimensions.get("window").height : Math.max(window.innerHeight || 100)
   );
 
-  pointToPxFactor = Math.min(1, (1 * width) / designWidth); //this is for converting size from XD design to real device.
+  // pointToPxFactor = (1 * width) / designWidth; //this is for converting size from XD design to real device.
+  pointToPxFactor = Math.max(1, (1 * height) / designHeight); //this is for converting size from XD design to real device.
 
   console.log(".js:6", width, height, pointToPxFactor);
 
