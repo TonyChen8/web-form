@@ -227,7 +227,6 @@ export default class Login extends Base {
         {this.renderMessage()}
         <div
           style={styles()
-            .container()
             .column()
             .center()}
         >

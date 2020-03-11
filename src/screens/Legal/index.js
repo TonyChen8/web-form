@@ -54,7 +54,8 @@ const HelpButton = () => {
             .paddingh(10)}
         >
           <Button
-            style={styles().paddingh(10)
+            style={styles()
+              .paddingh(10)
               .ftSize(30)
               .pullRight()}
             onClick={toggle}
@@ -172,11 +173,7 @@ export default class Legal extends Base {
       phoneNumber
     } = this.state;
     return (
-      <div
-        style={styles()
-          .w(600)
-          .marginb(20)}
-      >
+      <div style={styles().w(600)}>
         {phoneError && (
           <div
             style={styles()
@@ -349,7 +346,7 @@ export default class Legal extends Base {
         {this.renderMessage()}
         <div
           style={styles()
-            .container()
+            // .container()
             .column()
             .center()}
         >

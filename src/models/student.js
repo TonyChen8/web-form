@@ -82,6 +82,7 @@ export default class Student {
 		});
 		if (res) {
 			this.verifyCode = res.code;
+			alert(res.code);
 			return res.code;
 		}
 		return null;
