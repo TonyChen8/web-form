@@ -38,7 +38,7 @@ class Guard extends Base {
   startCountDown() {
     this.timer = setInterval(() => {
       this.setState({ time: this.state.time - 1 });
-      if (this.state.time <= 1) {
+      if (this.state.time < 1) {
         this.stopTimer();
         this.onNavigateToHome();
       }
@@ -120,34 +120,41 @@ class Guard extends Base {
         <div
           style={styles()
             .bg(colors.bgBlue)
+            .h(50)
             .row()
             .fullWidth()
             .center()
             .paddingh(20)}
-        >
-          <Button
-            style={styles()
-              .ftSize(30)
-              .pullRight()}
-            onClick={this.onToggle}
-          >
-            <div
-              style={styles()
-                .ftSize(30)
-                .ftColor(colors.ftWhite)}
-            >
-              X
-            </div>
-          </Button>
-        </div>
+        />
         <Separator />
         <div
           style={styles()
             .paddingh(30)
             .paddingv(30)}
         >
-          <div style={styles().ftSize(24)}>
+          <div
+            style={styles()
+              .ftSize(24)
+              .marginb(30)}
+          >
             You session will be expired in {time} second.
+          </div>
+
+          <div style={styles().row()}>
+            <Button
+              style={styles()
+                .bg(colors.bgBlue)
+                .pullRight()}
+              onClick={this.onToggle}
+            >
+              <div
+                style={styles()
+                  .ftSize(24)
+                  .ftColor(colors.ftWhite)}
+              >
+                Continue
+              </div>
+            </Button>
           </div>
         </div>
       </Modal>

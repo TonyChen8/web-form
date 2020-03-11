@@ -145,14 +145,28 @@ export default class Checkout extends Base {
     );
   }
 
-  onResend() {
-    this.timer = setInterval(() => {
-      this.setState({ time: this.state.time - 1 });
-      if (this.state.time < 1) {
-        this.stopTimer();
-        this.setState({ time: timeout });
+  async onResend() {
+    try {
+      this.pub(Spinner.Messages.Show, { show: true });
+      let student = Student.get();
+      let res = await student.getVerifyCode();
+
+      if (res) {
+        this.setState({ time: this.state.time - 1 });
+        this.timer = setInterval(() => {
+          this.setState({ time: this.state.time - 1 });
+          if (this.state.time < 1) {
+            this.stopTimer();
+            this.setState({ time: timeout });
+          }
+        }, 1000);
+      } else {
+        alert("Send code failed. Please check your phone number and resend again.");
       }
-    }, 1000);
+    } catch (e) {
+      alert(e);
+    }
+    this.pub(Spinner.Messages.Show, { show: false });
   }
 
   renderNextButton() {
