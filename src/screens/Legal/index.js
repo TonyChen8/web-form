@@ -8,8 +8,12 @@ import Base from "../../components/Base";
 import Button from "../../components/Button";
 import PhoneNumber from "../../components/PhoneNumber";
 import Separator from "../../components/Separator";
+import Spinner from "../../components/Spinner";
 
 import Checkout from "../Checkout";
+import Guard from "../Guard";
+
+import Student from "../../models/student";
 
 const HelpButton = () => {
   const [modal, setModal] = useState(false);
@@ -20,7 +24,8 @@ const HelpButton = () => {
     <div
       style={styles()
         .row()
-        .w(600)}
+        .w(600)
+        .marginb(15)}
     >
       <Button style={styles().pullRight()} onClick={toggle}>
         <div
@@ -46,10 +51,10 @@ const HelpButton = () => {
             .row()
             .fullWidth()
             .center()
-            .paddingh(20)}
+            .paddingh(10)}
         >
           <Button
-            style={styles()
+            style={styles().paddingh(10)
               .ftSize(30)
               .pullRight()}
             onClick={toggle}
@@ -63,7 +68,7 @@ const HelpButton = () => {
             </div>
           </Button>
         </div>
-        <Separator></Separator>
+        <Separator />
         <div
           style={styles()
             .paddingh(30)
@@ -81,16 +86,28 @@ const HelpButton = () => {
 export default class Legal extends Base {
   static Route = "legal";
 
-  state = {
-    phoneNumber: "",
-    confirmedNumber: "",
-    country: "+61",
-    confirmedCountry: "+61",
-    phoneError: false,
-    confirmError: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      phoneNumber: "",
+      confirmedNumber: "",
+      country: "61",
+      confirmedCountry: "61",
+      phoneError: false,
+      confirmError: false
+    };
+  }
+
+  componentDidMount() {
+    this.pub(Guard.Messages.Reset);
+  }
+  componentDidUpdate() {
+    this.pub(Guard.Messages.Reset);
+  }
 
   renderHeader() {
+    let student = Student.get();
     return (
       <div
         style={styles()
@@ -105,7 +122,14 @@ export default class Legal extends Base {
             .ftSize(30)
             .ftColor(colors.ftWhite)}
         >
-          Welcome GRADUATE NAME to EVENT NAME
+          {`Welcome ${student.getName()} ${student.getLastname()} to`}
+        </div>
+        <div
+          style={styles()
+            .ftSize(20)
+            .ftColor(colors.ftWhite)}
+        >
+          {student.getCeremonyName()}
         </div>
       </div>
     );
@@ -168,7 +192,7 @@ export default class Legal extends Base {
             .ftSize(20)
             .paddingv(5)
             .marginv(10)}
-          placeholder={"Mobile Phone"}
+          placeholder={"Mobile Phone ( e.g. 0412345678 )"}
           containerStyle={styles()
             .bg(colors.bgGray)
             .marginb(40)}
@@ -277,7 +301,7 @@ export default class Legal extends Base {
     this.setState({ confirmedNumber: event.target.value });
   }
 
-  onContinue() {
+  async onContinue() {
     const { country, phoneNumber, confirmedCountry, confirmedNumber } = this.state;
     this.setState({ phoneError: false, confirmError: false });
 
@@ -288,13 +312,30 @@ export default class Legal extends Base {
     if (
       !confirmedNumber ||
       confirmedNumber.length <= 0 ||
-      phoneNumber !== confirmedNumber
+      phoneNumber !== confirmedNumber ||
+      country !== confirmedCountry
     ) {
       this.setState({ confirmError: true });
       return;
     }
 
-    this.navigate(Checkout.Route);
+    try {
+      this.pub(Spinner.Messages.Show, { show: true });
+      let student = Student.get();
+      student.setCountryCode(country);
+      student.setPhone(phoneNumber);
+      let res = await student.getVerifyCode();
+
+      this.pub(Spinner.Messages.Show, { show: false });
+
+      if (res) {
+        this.navigate(Checkout.Route);
+      } else {
+        alert("Send code failed. Please check your phone number and resend again.");
+      }
+    } catch (e) {
+      alert(e);
+    }
   }
 
   render() {

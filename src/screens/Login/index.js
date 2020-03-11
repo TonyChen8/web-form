@@ -6,8 +6,10 @@ import Base from "../../components/Base";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import DatePicker from "../../components/DatePicker";
+import Spinner from "../../components/Spinner";
 
 import Legal from "../Legal";
+import Student from "../../models/student";
 
 export default class Login extends Base {
   static Route = "/";
@@ -178,7 +180,7 @@ export default class Login extends Base {
     let date = `${year}-${month}-${day}`;
     return new Date(date).getDate().toString() === day.toString();
   }
-  onNext() {
+  async onNext() {
     const { day, month, year, studentId } = this.state;
     this.setState({ idError: false, DOBError: false });
 
@@ -187,9 +189,28 @@ export default class Login extends Base {
     }
 
     let valid = this.check(year, month, day);
-    console.log("-form/src/screens/Login/index.js:159", valid);
+
     if (valid) {
-      this.navigate("legal", Legal.Route);
+      try {
+        this.pub(Spinner.Messages.Show, { show: true });
+
+        let student = Student.create({ id: studentId, dob: `${year}-${month}-${day}` });
+        let res = await student.login();
+
+        this.pub(Spinner.Messages.Show, { show: false });
+
+        if (res) {
+          if (res.canGraduate()) {
+            this.navigate(Legal.Route);
+          } else {
+            alert("Sorry. You are not allowed to graduate.");
+          }
+        } else {
+          alert("Login failed. Please check your student id and your date of birth.");
+        }
+      } catch (e) {
+        alert(e);
+      }
     } else {
       this.setState({ DOBError: true });
     }

@@ -6,13 +6,14 @@ import Button from "../../components/Button";
 
 import Login from "../Login";
 
+const timeout = 10;
 export default class Confirm extends Base {
   static Route = "confirm";
 
   constructor(props) {
     super(props);
     this.timer = null;
-    this.state = { time: 10 };
+    this.state = { time: timeout };
   }
 
   componentDidMount() {

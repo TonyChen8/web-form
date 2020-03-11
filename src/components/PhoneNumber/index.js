@@ -29,19 +29,21 @@ export default class PhoneNumber extends Component {
         }}
       >
         {icon && icon}
+        <div style={styles().ftSize(20)}>+</div>
         <input
-          type="text"
+          type="number"
           placeholder="Country"
           style={{
             ...styles({ textAlign: "center" })
               .bg("transparent")
               .border(0)
-              .w("20%")
+              .w("15%")
               .paddingh(10)
               .h(20)
               .ftSize(20),
             ...style
           }}
+          disabled={true}
           value={country}
           {...rest}
           onChange={onCountryCodeChange}
@@ -54,7 +56,7 @@ export default class PhoneNumber extends Component {
           -
         </div>
         <input
-          type="text"
+          type="number"
           placeholder={placeholder}
           style={{
             ...styles()

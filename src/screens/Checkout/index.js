@@ -4,18 +4,41 @@ import React from "react";
 import Base from "../../components/Base";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
+import Spinner from "../../components/Spinner";
 
 import Confirm from "../Confirm";
+import Guard from "../Guard";
 
+import Student from "../../models/student";
+
+const timeout = 30;
 export default class Checkout extends Base {
   static Route = "checkout";
 
-  state = {
-    securityCode: "",
-    confirmedNumber: "",
-    codeError: false,
-    confirmError: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      securityCode: "",
+      confirmedNumber: "",
+      codeError: false,
+      confirmError: false,
+      time: timeout
+    };
+    this.timer = null;
+  }
+
+  componentDidMount() {
+    this.pub(Guard.Messages.Reset);
+  }
+  componentDidUpdate() {
+    this.pub(Guard.Messages.Reset);
+  }
+
+  stopTimer() {
+    this.timer && clearInterval(this.timer);
+    this.timer = null;
+  }
 
   renderHeader() {
     return (
@@ -44,11 +67,12 @@ export default class Checkout extends Base {
         style={styles()
           .column()
           .center()
+          .paddingh(20)
           .marginb(10)}
       >
         <div
           style={styles()
-            .ftSize(36)
+            .ftSize(30)
             .marginb(20)}
         >
           Please enter the code you have just received by text.
@@ -57,7 +81,8 @@ export default class Checkout extends Base {
     );
   }
   renderInputs() {
-    const { codeError, confirmError } = this.state;
+    const { codeError, confirmError, time } = this.state;
+    let student = Student.get();
     return (
       <div
         style={styles()
@@ -95,11 +120,15 @@ export default class Checkout extends Base {
           onChange={this.onCodeChange}
         />
         <Button
-          style={styles()
-            .fullWidth()
-            .paddingv(10)
-            .bg(colors.ftBlue)}
-          // onClick={}
+          style={{
+            ...styles()
+              .fullWidth()
+              .paddingv(10)
+              .bg(colors.ftBlue),
+            ...(time < timeout ? styles().fade(0.5) : {})
+          }}
+          onClick={this.onResend}
+          disabled={time < timeout}
         >
           <div
             style={styles()
@@ -107,11 +136,23 @@ export default class Checkout extends Base {
               .ftSize(30)}
           >
             <div style={styles()}>Resend confirmation code to</div>
-            <div style={styles()}>0417749507</div>
+            <div style={styles()}>
+              {student.getPhone()} {time < timeout ? `in ${time}s` : ""}
+            </div>
           </div>
         </Button>
       </div>
     );
+  }
+
+  onResend() {
+    this.timer = setInterval(() => {
+      this.setState({ time: this.state.time - 1 });
+      if (this.state.time < 1) {
+        this.stopTimer();
+        this.setState({ time: timeout });
+      }
+    }, 1000);
   }
 
   renderNextButton() {
@@ -162,7 +203,7 @@ export default class Checkout extends Base {
     this.setState({ securityCode: event.target.value });
   }
 
-  onCheckIn() {
+  async onCheckIn() {
     const { securityCode } = this.state;
     this.setState({ codeError: false, confirmError: false });
 
@@ -171,9 +212,21 @@ export default class Checkout extends Base {
       return;
     }
 
-    this.setState({ confirmError: true });
+    try {
+      this.pub(Spinner.Messages.Show, { show: true });
 
-    this.navigate(Confirm.Route);
+      let student = Student.get();
+      let res = await student.matchVerifyCode(securityCode);
+      this.pub(Spinner.Messages.Show, { show: false });
+
+      if (res) {
+        this.navigate(Confirm.Route);
+      } else {
+        this.setState({ confirmError: true });
+      }
+    } catch (e) {
+      alert(e);
+    }
   }
 
   render() {

@@ -5,8 +5,8 @@ import PubSub from "pubsub-js";
 
 let Dimensions, Platform, Constants;
 
-const designWidth = 1024;
-const designHeight = 768;
+const designWidth = 768;
+const designHeight = 1024;
 
 let pointToPxFactor;
 let fontCalibration = 1;
